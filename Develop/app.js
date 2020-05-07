@@ -9,6 +9,7 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const employees = [];
 
 inquirer
 const promptUser = () => {
@@ -16,22 +17,22 @@ const promptUser = () => {
         .prompt([
             {
                 type: "input",
-                message: "What is your manager name?",
+                message: "What is the manager name?",
                 name: "managerName",
             },
             {
                 type: "number",
-                message: "What is your manager's ID?",
+                message: "What is the manager's ID?",
                 name: "managerID",
             },
             {
                 type: "input",
-                message: "What is your manager's email?",
+                message: "What is the manager's email?",
                 name: "managerEmail",
             },
             {
                 type: "number",
-                message: "What is your manager's office number?",
+                message: "What is the manager's office number?",
                 name: "managerOfficeNum",
 
             },
@@ -40,26 +41,90 @@ const promptUser = () => {
                 message: "What type of team member are you seeking to add?",
                 name: "teamMembers",
                 choices: ["Engineer", "Intern", "None"],
-                default: "None", 
+                default: "None",
             },
-    
+
         ])
-        .then(function (answers) {
-            if (choices === "none")
-            return 
+        .then((selection) => {
+            const managerSelection = new Manager(selection.managerOfficeNum, selection.managerName, selection.managerID, selection.managerEmail);
+            employees.push(managerSelection);
+            console.log(employees);
+            return selection.teamMembers;
         })
-        
-        
-        .catch(error => {
+        .then((teamMembers) => {
+            if (teamMembers === "Engineer") {
+                inquirer
+                    .prompt([
+                        {
+                            type: "input",
+                            message: "What is the engineer name?",
+                            name: "engineerName",
+                        },
+                        {
+                            type: "number",
+                            message: "What is the engineer's ID?",
+                            name: "engineerID",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the engineer's email?",
+                            name: "engineerEmail",
+                        },
+                        {
+                            type: "number",
+                            message: "What is the engineer's github account?",
+                            name: "engineergithub",
+
+                        },
+                    ])
+            }
+            
+        })
+        .then((selection) => {
+            const engineerSelection = new Engineer(selection.engineerName, selection.engineerID, selection.engineerEmail, selection.engineergithub);
+                employees.push(engineerSelection);
+                console.log(employees);
+        })
+        .then((teamMembers) => {
+            if (teamMembers === "Intern") {
+                inquirer
+                    .prompt([
+                        {
+                            type: "input",
+                            message: "What is the intern name?",
+                            name: "internName",
+                        },
+                        {
+                            type: "number",
+                            message: "What is the intern's ID?",
+                            name: "internID",
+                        },
+                        {
+                            type: "input",
+                            message: "What is the intern's email?",
+                            name: "internEmail",
+                        },
+                        {
+                            type: "number",
+                            message: "What is the intern's github account?",
+                            name: "interngithub",
+
+                        },
+                    ])
+            }
+        }).catch(error => {
             if (error.isTtyError) {
                 // Prompt couldn't be rendered in the current environment
             } else {
                 // Something else when wrong
             }
         });
-};
-promptUser();
 
+
+};
+
+
+promptUser();
 
 
 // Write code to use inquirer to gather information about the development team members,
