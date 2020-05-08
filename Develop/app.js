@@ -45,87 +45,108 @@ const promptUser = () => {
             },
 
         ])
-        .then((selection) => {
+        .then((selection => {
             const managerSelection = new Manager(selection.managerOfficeNum, selection.managerName, selection.managerID, selection.managerEmail);
             employees.push(managerSelection);
             console.log(employees);
-            return selection.teamMembers;
-        })
-        .then((teamMembers) => {
-            if (teamMembers === "Engineer") {
-                inquirer
-                    .prompt([
-                        {
-                            type: "input",
-                            message: "What is the engineer name?",
-                            name: "engineerName",
-                        },
-                        {
-                            type: "number",
-                            message: "What is the engineer's ID?",
-                            name: "engineerID",
-                        },
-                        {
-                            type: "input",
-                            message: "What is the engineer's email?",
-                            name: "engineerEmail",
-                        },
-                        {
-                            type: "number",
-                            message: "What is the engineer's github account?",
-                            name: "engineergithub",
 
-                        },
-                    ])
-            }
-            
-        })
-        .then((selection) => {
-            const engineerSelection = new Engineer(selection.engineerName, selection.engineerID, selection.engineerEmail, selection.engineergithub);
-                employees.push(engineerSelection);
-                console.log(employees);
-        })
-        .then((teamMembers) => {
-            if (teamMembers === "Intern") {
-                inquirer
-                    .prompt([
-                        {
-                            type: "input",
-                            message: "What is the intern name?",
-                            name: "internName",
-                        },
-                        {
-                            type: "number",
-                            message: "What is the intern's ID?",
-                            name: "internID",
-                        },
-                        {
-                            type: "input",
-                            message: "What is the intern's email?",
-                            name: "internEmail",
-                        },
-                        {
-                            type: "number",
-                            message: "What is the intern's github account?",
-                            name: "interngithub",
-
-                        },
-                    ])
-            }
-        }).catch(error => {
-            if (error.isTtyError) {
-                // Prompt couldn't be rendered in the current environment
+            if (selection.teamMembers === "Engineer") {
+                engineerPrompt();
+            } else if (selection.teamMembers === "Intern") {
+                internPrompt();
             } else {
-                // Something else when wrong
+                return; 
             }
-        });
 
 
-};
+        }))
+        .catch(error => {
+            if (error.isTtyError) {
+                console.log("Sorry prompt didn't render")
+            } else {
+                console.log("Something went terribly wrong")
+        };
+})
+}
+
+internPrompt = () => {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "What is the intern name?",
+                name: "internName",
+            },
+            {
+                type: "number",
+                message: "What is the intern's ID?",
+                name: "internID",
+            },
+            {
+                type: "input",
+                message: "What is the intern's email?",
+                name: "internEmail",
+            },
+            {
+                type: "number",
+                message: "What is the intern's alma mater",
+                name: "internUni",
+
+            },
+            {
+                type: "list",
+                message: "Do you want to add another member?",
+                name: "moreMembers",
+                choices: ["Engineer", "Intern", "Manager", "No Thanks"],
+                default: "No Thanks",
+            },
 
 
+        ]).then((selection) => {
+            const internSelection = new Intern(selection.internName, selection.internID, selection.internEmail, selection.internUni);
+            employees.push(internSelection);
+            console.log(employees);
+        })
+}
+engineerPrompt = () => {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                message: "What is the engineer name?",
+                name: "engineerName",
+            },
+            {
+                type: "number",
+                message: "What is the engineer's ID?",
+                name: "engineerID",
+            },
+            {
+                type: "input",
+                message: "What is the engineer's email?",
+                name: "engineerEmail",
+            },
+            {
+                type: "number",
+                message: "What is the engineer's github account?",
+                name: "engineergithub",
+
+            },
+            {
+                type: "list",
+                message: "Do you want to add another member?",
+                name: "moreMembers",
+                choices: ["Engineer", "Intern", "Manager", "No Thanks"],
+                default: "No Thanks",
+            },
+        ]).then((selection) => {
+            const engineerSelection = new Engineer(selection.engineerName, selection.engineerID, selection.engineerEmail, selection.engineergithub);
+            employees.push(engineerSelection);
+            console.log(employees);
+        })
+}
 promptUser();
-
+//ADD if else to prompt back to man,intern,engin prompts 
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
