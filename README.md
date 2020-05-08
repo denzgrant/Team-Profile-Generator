@@ -13,11 +13,11 @@
   <h2 id="Installation">Installation</h2>                         
   <p>Clone repo: https://github.com/denzgrant/Team-Profile-Generator.git</p>
   <h2 id="Usage">Usage</h2>
-  <p></p> 
+  <p>This application can be used to display information regarding a team's employees</p> 
   <h2 id="License">License</h2>
   <p>Licensed under the<a href="./README.md">Unlicense</a></p>
   <h2 id="Contributing">Contributing</h2>
-  <p></p>
+  <p>Anyone is free to contribute to this application. Being an open source community makes the Dev community special. Any contributes are appreciated. </p>
   <h2 id="Tests">Tests</h2>
   <h3>To test this project, follow these directions:</h3>
   <p>Testing for this application can be done with using Jest. This can be accomplished by typing in "npm run test" in command line. </p>
