@@ -5,8 +5,6 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-
-
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
@@ -24,16 +22,16 @@ const promptManager = () => {
                 name: "managerName",
             },
             {
-                type: "number",
+                type: "input",
                 message: "What is the manager's ID?",
                 name: "managerID",
-                validate: function (value) {
-                    var pass = (value !== NaN);
+                validate: ans => {
+                    const pass = ans.match("[0-9]");
                     if (pass) {
                         return true;
                     }
-                    return `Please enter a valid number`;
-                },
+                    return "Please enter a number";
+                }
             },
             {
                 type: "input",
@@ -41,9 +39,16 @@ const promptManager = () => {
                 name: "managerEmail",
             },
             {
-                type: "number",
+                type: "input",
                 message: "What is the manager's office number?",
                 name: "managerOfficeNum",
+                validate: ans => {
+                    const pass = ans.match("^[0-9]");
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please enter a number";
+                }
 
             },
             {
@@ -85,9 +90,16 @@ internPrompt = () => {
                 name: "internName",
             },
             {
-                type: "number",
+                type: "input",
                 message: "What is the intern's ID?",
                 name: "internID",
+                validate: ans => {
+                    const pass = ans.match("[0-9]");
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please enter a number";
+                }
             },
             {
                 type: "input",
@@ -133,9 +145,16 @@ engineerPrompt = () => {
                 name: "engineerName",
             },
             {
-                type: "number",
+                type: "input",
                 message: "What is the engineer's ID?",
                 name: "engineerID",
+                validate: ans => {
+                    const pass = ans.match("[0-9]");
+                    if (pass) {
+                        return true;
+                    }
+                    return "Please enter a number";
+                }
             },
             {
                 type: "input",
