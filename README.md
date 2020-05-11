@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/Node-12.16.3-brightgreen">v<img src="https://img.shields.io/badge/-JavaScript-brightgreen">
+<img src="https://img.shields.io/badge/Node-12.16.3-brightgreen">v<img src="https://img.shields.io/badge/-JavaScript-brightgreen"><img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">
   
   <img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">      
   <h1>Team Profile Generator</h1>
