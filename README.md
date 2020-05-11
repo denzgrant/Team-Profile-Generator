@@ -1,4 +1,6 @@
-
+<img src="https://img.shields.io/badge/Node-12.16.3-brightgreen">
+  <img src="https://img.shields.io/badge/-JavaScript-brightgreen">
+  <img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">      
   <h1>Team Profile Generator</h1>
   <p>This application prompts the user using npm's inquirer for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.</p>
   <h2>Table of Contents</h2>
@@ -23,8 +25,5 @@
   <p>Testing for this application can be done with using Jest. This can be accomplished by typing in "npm run test" in command line. </p>
   <h2 id="Questions">Questions</h2>
   <p style="strong">Any questions regarding this project, contact denzgrant@gmail.com directly.</p> 
-  <img src="https://avatars.githubusercontent.com/u/58059554?" alt="git hub profile picture" height="225" width="250">
-  <img src="https://img.shields.io/badge/Node-12.16.3-brightgreen">
-  <img src="https://img.shields.io/badge/-JavaScript-brightgreen">
-  <img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">                           
+  <img src="https://avatars.githubusercontent.com/u/58059554?" alt="git hub profile picture" height="225" width="250"                    
   
