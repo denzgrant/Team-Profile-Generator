@@ -25,8 +25,6 @@
 </code></pre></li>
 <li>In the root directory of the project, start the app.<pre><code> <span class="hljs-keyword">node</span> <span class="hljs-title">app</span>.js
 </code></pre></li>
-<li>Run tests.<pre><code> npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span></span>
-</code></pre></li>
 </ol>
   <h2 id="Usage">Usage</h2>
   <p>This application can be used to display information regarding a team's employees</p> 
