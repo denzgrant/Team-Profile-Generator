@@ -15,7 +15,19 @@
    <li><a href="#Questions">Questions</a></li>                         
   </ul>
   <h2 id="Installation">Installation</h2>                         
-  <p>Clone repo: https://github.com/denzgrant/Team-Profile-Generator.git</p>
+  <p>
+  <ol>
+<li>Clone this repository.<pre><code> git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://https://github.com/denzgrant/Team-Profile-Generator.git
+</code></pre></li>
+<li>Navigate into the cloned directory.<pre><code> cd <span class="hljs-keyword">template</span>-engine-employee-summary
+</code></pre></li>
+<li>Install Nodejs dependencies.<pre><code> npm <span class="hljs-keyword">install</span>
+</code></pre></li>
+<li>In the root directory of the project, start the app.<pre><code> <span class="hljs-keyword">node</span> <span class="hljs-title">app</span>.js
+</code></pre></li>
+<li>Run tests.<pre><code> npm <span class="hljs-keyword">run</span><span class="bash"> <span class="hljs-built_in">test</span></span>
+</code></pre></li>
+</ol>
   <h2 id="Usage">Usage</h2>
   <p>This application can be used to display information regarding a team's employees</p> 
   <h2 id="License">License</h2>
