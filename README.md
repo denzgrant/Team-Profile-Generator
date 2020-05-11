@@ -1,7 +1,7 @@
-<img src="https://img.shields.io/badge/Node-12.16.3-brightgreen">v<img src="https://img.shields.io/badge/-JavaScript-brightgreen"><img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">
-  
-  <img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">      
+<img src="https://img.shields.io/badge/Node-12.16.3-brightgreen"><img src="https://img.shields.io/badge/-JavaScript-brightgreen"><img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">
+       
   <h1>Team Profile Generator</h1>
+  
   <p>This application prompts the user using npm's inquirer for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.</p>
   <h2>Table of Contents</h2>
   <ul> 
