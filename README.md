@@ -16,7 +16,7 @@
   <h2 id="Usage">Usage</h2>
   <p>This application can be used to display information regarding a team's employees</p> 
   <h2 id="License">License</h2>
-  <p>Licensed under the<a href="./README.md">Unlicense</a></p>
+  <p>Licensed under the <a href="./README.md">Unlicense</a></p>
   <h2 id="Contributing">Contributing</h2>
   <p>Anyone is free to contribute to this application. Being an open source community makes the Dev community special. Any contributes are appreciated. </p>
   <h2 id="Tests">Tests</h2>
