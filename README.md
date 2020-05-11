@@ -1,7 +1,28 @@
 <img src="https://img.shields.io/badge/Node-12.16.3-brightgreen"><img src="https://img.shields.io/badge/-JavaScript-brightgreen"><img src="https://img.shields.io/github/followers/denzgrant?label=follow&style=social">
        
   <h1>Team Profile Generator</h1>
-  <p>This application prompts the user using npm's inquirer for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.</p>
+  <p>This application prompts the user using npm's inquirer for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.
+. Clone this repository.
+    ```
+    git clone https://github.com/sdanyalk/template-engine-employee-summary.git
+    ```
+1. Navigate into the cloned directory.
+    ```
+    cd template-engine-employee-summary
+    ```
+1. Install Nodejs dependencies.
+    ```
+    npm install
+    ```
+1. In the root directory of the project, start the app.
+    ```
+    node app.js
+    ```
+1. Run tests.
+    ```
+    npm run test
+    ```
+</p>
   <h2>Table of Contents</h2>
   <ul> 
    <li><a href="#Installation">Installation</a></li> 
